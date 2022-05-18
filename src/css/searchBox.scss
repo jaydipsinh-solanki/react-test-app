@@ -1,0 +1,39 @@
+@import './variable.scss';
+
+.searchbox-wrap {
+  display: flex;
+  justify-content: center;
+  max-width: 720px;
+  margin: 0 auto;
+  background: rgba(229, 242, 248, 0.05);
+
+  @media (min-width: 767px) and (max-width: 1199px) {
+    margin-left: calc(100% - 600px);
+  }
+
+  @media screen and (max-width: 576px) {
+    flex-wrap: wrap;
+    max-width: 90%;
+  }
+
+  input {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 42px;
+    letter-spacing: 0.015em;
+    padding: 16px 25px;
+    width: $width;
+    color: $white-e5;
+    border: 1px solid rgba(229, 242, 248, 0.33);
+    border-radius: 5px 0px 0px 5px;
+
+    @media screen and (max-width: 576px) {
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0.010em;
+      padding: 10px;
+      border-radius: 0px;
+      text-align: center;
+    }
+  }
+}

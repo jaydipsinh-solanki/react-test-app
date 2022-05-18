@@ -1,0 +1,327 @@
+/*GlobalStyling*/
+@import './css/variable.scss';
+
+/*Font-family*/
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+/*GlobalElements*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: $white-e5;
+  background: $blue-003;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $white-e5;
+  text-decoration: none;
+  font-family: "Krona One", sans-serif;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 67.67px;
+  line-height: 87px;
+  letter-spacing: -0.025em;
+  color: $white-e5;
+  text-align: left;
+
+  @media screen and (max-width:991px) {
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: normal;
+  }
+}
+
+
+img {
+  max-width: 100%;
+}
+
+input,
+button {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+
+  &:focus {
+    border: 0;
+    outline: 0;
+  }
+}
+
+input {
+  &::placeholder {
+    color: $white-e5;
+  }
+}
+
+/*GlobalClass*/
+
+.btn-primary {
+  border-radius: 0px 5px 5px 0px;
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  color: $blue-001;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  background: #FF763C;
+  box-shadow: 0px 0px 54px rgba(255, 118, 59, .6);
+  cursor: pointer;
+
+  @media screen and (max-width: 576px) {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.1em;
+    border-radius: 0px;
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-link {
+  color: $blue-61;
+}
+
+.py-lg {
+  padding: 170px 0 !important;
+
+  @media screen and (max-width: 768px) {
+    padding: 50px 15px !important;
+  }
+}
+
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.f-italic {
+  font-style: italic;
+}
+
+.site-container {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media screen and (min-width: 576px) {
+    max-width: 540px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 650px;
+  }
+
+  @media screen and (min-width: 991px) {
+    max-width: 950px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
+
+.d-flex {
+  display: flex;
+  width: 100%;
+
+  @media screen and (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
+}
+
+.title-sm {
+  font: normal 36px/57px 'Krona One', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.38em;
+  color: $white-e5;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 991px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media screen and (max-width: 991px) {
+    font-size: 14px;
+  }
+}
+
+.title-radient {
+  font: normal 310px/280px 'Krona One', sans-serif;
+  text-align: center;
+  letter-spacing: 0.005em;
+  background: radial-gradient(11.71% 66.65% at 81.14% 39.75%, rgba(0, 0, 0, 0.5) 44.79%, rgba(0, 0, 0, 0) 100%)
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    , radial-gradient(26.92% 110.05% at 21.36% 79.07%, rgba(0, 14, 28, 0.6) 5.21%, rgba(0, 33, 55, 0) 50%)
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    , #54C9FF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  word-wrap: break-word;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 1199px) {
+    position: relative;
+    font-size: 150px;
+    line-height: 150px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 80px;
+    line-height: 80px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 260.35px;
+    left: 215.81px;
+    background: $white-e5;
+    mix-blend-mode: overlay;
+    max-width: 709.4px;
+    width: $width;
+    height: 79.54px;
+    content: '';
+
+    @media screen and (max-width: 1199px) {
+      top: 0;
+      left: 0;
+      max-width: 500px;
+      height: 30px;
+      right: 0;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 480px) {
+      height: 10px;
+    }
+  }
+
+  &::after {
+    height: 86.51px;
+    left: 676.99px;
+    top: 392.7px;
+
+    @media screen and (max-width: 1199px) {
+      height: 30px;
+      left: 0;
+      top: unset;
+      bottom: 0;
+    }
+
+    @media screen and (max-width: 480px) {
+      height: 10px;
+    }
+  }
+}
+
+.para-lg {
+  font-size: 31px;
+  line-height: 51px;
+  margin: 0 auto;
+  text-align: left;
+  letter-spacing: 0.015em;
+  color: $white-e5;
+
+  @media screen and (max-width: 991px) {
+    font-size: 21px;
+    line-height: 31px;
+  }
+}
+
+.para-md {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 33px;
+  letter-spacing: 0.015em;
+  color: $white-e5;
+  opacity: 0.6;
+  text-align: left;
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.para-sm {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.015em;
+  color: $white-e5;
+  opacity: 0.4;
+}
+
+.bgimg-plus,
+.bgimg-dots {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 70px;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("./images/plus.png");
+
+    @media screen and (max-width: 1199px) {
+      display: none;
+    }
+  }
+}
+
+.bgimg-dots {
+  &::after {
+    left: unset;
+    right: 125px;
+    top: 300px;
+    width: 250px;
+    height: 250px;
+    background-image: url("./images/dot.png");
+  }
+}

@@ -1,0 +1,87 @@
+@import './variable.scss';
+
+.two-col-wrap {
+  position: relative;
+  display: inline-block;
+
+  .stick-left {
+    float: left;
+  }
+
+  h1 {
+    max-width: 750px;
+    width: 100%;
+  }
+
+  .right-content {
+    float: right;
+    width: calc(100% - 120px);
+    background-color: $blue-001;
+    padding: 70px;
+    margin-top: -150px;
+
+    @media screen and (max-width: 991px) {
+      margin-top: 0;
+      width: 100%;
+      padding: 30px;
+    }
+
+    .content-left {
+      position: relative;
+      text-align: left;
+      width: 50%;
+      padding-top: 50px;
+
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+        margin-bottom: 30px;
+        padding-top: 20px;
+      }
+
+      .mw-440 {
+        P {
+          max-width: 420px;
+          width: 100%;
+
+          @media screen and (max-width: 1024px) {
+            max-width: 100%;
+            margin-bottom: 30px;
+          }
+        }
+      }
+
+      a {
+        position: absolute;
+        bottom: 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        opacity: .6;
+
+        @media screen and (max-width: 768px) {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    .content-right {
+      position: relative;
+
+      .circle-big {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 175px;
+        width: auto;
+
+        @media screen and (max-width: 768px) {
+          max-width: 100px;
+        }
+      }
+    }
+  }
+}
